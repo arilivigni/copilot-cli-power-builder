@@ -2,6 +2,8 @@
 
 This final step validates that you can run a full feature workflow using specialized instructions, skills automation, MCP context, and review-driven iteration.
 
+<img width="900" alt="Branch diagram showing work promoted from the review and debug branch into an end to end capstone branch that goes through PR review and a follow-up commit" src="../images/step-5-capstone-branch.svg" />
+
 ### 📖 Theory: End-to-end Copilot CLI orchestration
 
 The highest leverage comes from chaining all advanced patterns into one delivery loop.

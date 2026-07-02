@@ -2,6 +2,8 @@
 
 Your next goal is to avoid repeating the same prompt patterns by codifying a reusable Copilot CLI skill.
 
+<img width="900" alt="Diagram showing a skill definition on the current branch leading to an invoked skill and a structured risk report" src="../images/step-3-skill-automation.svg" />
+
 ### 📖 Theory: Reusable skills for consistent output
 
 Skills package repeatable engineering tasks so Copilot CLI can produce structured output with less prompt overhead.

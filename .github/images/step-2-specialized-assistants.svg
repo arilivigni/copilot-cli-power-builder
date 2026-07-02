@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Step 2 specialization flow</title>
+  <desc id="desc">A diagram showing the same branch enhanced by a workflow reviewer agent and repository instructions before producing improved output.</desc>
+  <rect width="1200" height="420" fill="#0d1117" rx="24"/>
+  <text x="60" y="70" fill="#f0f6fc" font-size="34" font-family="Arial, sans-serif" font-weight="700">Stay on feature/review-debug-loop</text>
+  <text x="60" y="108" fill="#8b949e" font-size="20" font-family="Arial, sans-serif">Add specialization to the same branch so later steps benefit automatically.</text>
+  <rect x="70" y="170" width="300" height="140" rx="18" fill="#1f6feb"/>
+  <text x="110" y="220" fill="#ffffff" font-size="26" font-family="Arial, sans-serif" font-weight="700">workflow-reviewer.agent.md</text>
+  <text x="128" y="258" fill="#dbeafe" font-size="20" font-family="Arial, sans-serif">Specialist for workflow checks</text>
+  <rect x="450" y="170" width="300" height="140" rx="18" fill="#238636"/>
+  <text x="505" y="220" fill="#ffffff" font-size="26" font-family="Arial, sans-serif" font-weight="700">copilot-instructions.md</text>
+  <text x="520" y="258" fill="#dcfce7" font-size="20" font-family="Arial, sans-serif">Always-on repo guidance</text>
+  <rect x="830" y="170" width="300" height="140" rx="18" fill="#8250df"/>
+  <text x="926" y="220" fill="#ffffff" font-size="26" font-family="Arial, sans-serif" font-weight="700">Before / after</text>
+  <text x="895" y="258" fill="#ede9fe" font-size="20" font-family="Arial, sans-serif">Compare output quality</text>
+  <path d="M380 240 H430" stroke="#8b949e" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="430,240 405,225 405,255" fill="#8b949e"/>
+  <path d="M760 240 H810" stroke="#8b949e" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="810,240 785,225 785,255" fill="#8b949e"/>
+</svg>

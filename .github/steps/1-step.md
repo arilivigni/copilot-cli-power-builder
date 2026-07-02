@@ -2,6 +2,8 @@
 
 You are kickstarting a high-signal engineering workflow and need to prove Copilot CLI can help review changes, debug issues, and drive focused test generation.
 
+<img width="900" alt="Diagram showing the Step 1 review and debug branch moving from an intentional bug to review and then to a fix with regression tests" src="../images/step-1-review-debug-loop.svg" />
+
 ### 📖 Theory: Review, debug, and test as one loop
 
 Copilot CLI can accelerate advanced development loops when prompts are scoped to concrete diffs and expected behavior.

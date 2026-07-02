@@ -2,6 +2,8 @@
 
 You now need context-aware Copilot CLI outputs that incorporate external system data rather than local assumptions only.
 
+<img width="900" alt="Diagram showing the review and debug branch receiving context from the built-in GitHub MCP server and one project-level MCP source" src="../images/step-4-mcp-context.svg" />
+
 ### 📖 Theory: MCP as a context bridge
 
 MCP servers let Copilot tools query external systems (GitHub, APIs, databases) so recommendations are grounded in real state.

@@ -2,6 +2,8 @@
 
 Now you need Copilot CLI output to consistently match team standards without rewriting prompt context every time.
 
+<img width="900" alt="Diagram showing the existing branch enhanced by a workflow reviewer agent and repository instructions before comparing output quality" src="../images/step-2-specialized-assistants.svg" />
+
 ### 📖 Theory: Specialization through agents and repository instructions
 
 Specialized assistant behavior comes from reusable prompts and instructions that encode coding standards, testing expectations, and output conventions.

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Step 5 capstone branch flow</title>
+  <desc id="desc">A branch diagram showing work moving from the review and debug branch into an end to end capstone branch, then into pull request review and follow-up commits.</desc>
+  <rect width="1200" height="420" fill="#0d1117" rx="24"/>
+  <text x="60" y="70" fill="#f0f6fc" font-size="34" font-family="Arial, sans-serif" font-weight="700">Promote the workflow into a capstone</text>
+  <text x="60" y="108" fill="#8b949e" font-size="20" font-family="Arial, sans-serif">Carry forward the branch setup, then take a new feature through PR review and iteration.</text>
+  <text x="80" y="250" fill="#58a6ff" font-size="24" font-family="Arial, sans-serif" font-weight="700">feature/review-debug-loop</text>
+  <path d="M70 280 H1110" stroke="#58a6ff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M420 280 C520 280, 530 160, 630 160 H1040" stroke="#ffa657" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="650" y="140" fill="#ffa657" font-size="24" font-family="Arial, sans-serif" font-weight="700">feature/end-to-end-capstone</text>
+  <circle cx="390" cy="280" r="16" fill="#f0f6fc"/>
+  <circle cx="650" cy="160" r="16" fill="#f0f6fc"/>
+  <circle cx="870" cy="160" r="16" fill="#f0f6fc"/>
+  <circle cx="1040" cy="160" r="16" fill="#f0f6fc"/>
+  <text x="610" y="205" fill="#f0f6fc" font-size="20" font-family="Arial, sans-serif">build feature</text>
+  <text x="824" y="205" fill="#f0f6fc" font-size="20" font-family="Arial, sans-serif">open PR</text>
+  <text x="990" y="205" fill="#f0f6fc" font-size="20" font-family="Arial, sans-serif">follow-up commit</text>
+</svg>

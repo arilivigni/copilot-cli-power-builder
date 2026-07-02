@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Step 3 skill automation flow</title>
+  <desc id="desc">A diagram showing a skill definition on the existing branch producing a repeatable risk and test-gap report.</desc>
+  <rect width="1200" height="420" fill="#0d1117" rx="24"/>
+  <text x="60" y="70" fill="#f0f6fc" font-size="34" font-family="Arial, sans-serif" font-weight="700">Automate the branch workflow</text>
+  <text x="60" y="108" fill="#8b949e" font-size="20" font-family="Arial, sans-serif">Turn your review pattern into a reusable skill on feature/review-debug-loop.</text>
+  <rect x="85" y="165" width="280" height="150" rx="18" fill="#1f6feb"/>
+  <text x="155" y="220" fill="#ffffff" font-size="26" font-family="Arial, sans-serif" font-weight="700">SKILL.md</text>
+  <text x="132" y="258" fill="#dbeafe" font-size="20" font-family="Arial, sans-serif">Describe when the skill runs</text>
+  <rect x="460" y="165" width="280" height="150" rx="18" fill="#238636"/>
+  <text x="560" y="220" fill="#ffffff" font-size="26" font-family="Arial, sans-serif" font-weight="700">Invoke skill</text>
+  <text x="517" y="258" fill="#dcfce7" font-size="20" font-family="Arial, sans-serif">Run it against branch work</text>
+  <rect x="835" y="165" width="280" height="150" rx="18" fill="#8250df"/>
+  <text x="890" y="220" fill="#ffffff" font-size="26" font-family="Arial, sans-serif" font-weight="700">Risk report</text>
+  <text x="888" y="258" fill="#ede9fe" font-size="20" font-family="Arial, sans-serif">Risk summary + test gaps</text>
+  <path d="M375 240 H440" stroke="#8b949e" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="440,240 415,225 415,255" fill="#8b949e"/>
+  <path d="M750 240 H815" stroke="#8b949e" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="815,240 790,225 790,255" fill="#8b949e"/>
+</svg>
