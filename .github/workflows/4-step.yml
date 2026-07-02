@@ -7,7 +7,7 @@ on:
       - main
       - "feature/**"
     paths:
-      - ".vscode/mcp.json"
+      - ".mcp.json"
       - "artifacts/step4-mcp-validation-log.md"
 
 permissions:
@@ -64,15 +64,31 @@ jobs:
         continue-on-error: true
         uses: skills/exercise-toolkit/actions/file-exists@v0.9.1
         with:
-          file: .vscode/mcp.json
+          file: .mcp.json
+
+      - name: Check MCP validation log includes built-in MCP check
+        id: check-built-in-mcp
+        continue-on-error: true
+        uses: skills/action-keyphrase-checker@v1
+        with:
+          text-file: artifacts/step4-mcp-validation-log.md
+          keyphrase: Built-in MCP check
 
       - name: Check MCP validation log includes source queried
-        id: check-for-keyphrase
+        id: check-source-queried
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v1
         with:
           text-file: artifacts/step4-mcp-validation-log.md
           keyphrase: Source queried
+
+      - name: Check MCP validation log includes action recommendation
+        id: check-action-recommendation
+        continue-on-error: true
+        uses: skills/action-keyphrase-checker@v1
+        with:
+          text-file: artifacts/step4-mcp-validation-log.md
+          keyphrase: Action recommendation
 
       - name: Update comment - step results
         uses: GrantBirki/comment@v2.1.1
@@ -85,10 +101,14 @@ jobs:
           vars: |
             step_number: 4
             results_table:
-              - description: "Checked if .vscode/mcp.json exists"
+              - description: "Checked if .mcp.json exists"
                 passed: ${{ steps.check-file-exists.outcome == 'success' }}
+              - description: "Checked for Built-in MCP check section in step 4 log"
+                passed: ${{ steps.check-built-in-mcp.outcome == 'success' }}
               - description: "Checked for Source queried section in step 4 log"
-                passed: ${{ steps.check-for-keyphrase.outcome == 'success' }}
+                passed: ${{ steps.check-source-queried.outcome == 'success' }}
+              - description: "Checked for Action recommendation section in step 4 log"
+                passed: ${{ steps.check-action-recommendation.outcome == 'success' }}
 
       - name: Fail job if not all checks passed
         if: contains(steps.*.outcome, 'failure')

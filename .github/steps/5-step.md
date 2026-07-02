@@ -16,13 +16,18 @@ Read more:
 - https://docs.github.com/en/pull-requests
 - https://learn.github.com/skills
 
-### ⌨️ Activity: Deliver a complete advanced feature workflow
+### ⌨️ Activity 1: Build the feature with your advanced workflow
 
 1. Create a branch named `feature/step-5-capstone` and implement a small feature or enhancement.
-1. Use your specialized instructions and reusable skill to guide implementation and produce artifacts.
-1. Run MCP-assisted analysis and update tests for the feature.
+1. Use `/plan` or a natural planning prompt, your repository instructions, and your reusable skill to guide implementation and tests.
+1. Record the prompt or approach you used under `## Plan prompt` in `artifacts/step5-end-to-end-summary.md`.
+
+### ⌨️ Activity 2: Take the feature through review and iteration
+
+1. Run MCP-assisted analysis and use the artifacts from Steps 2, 3, and 4 while preparing the feature for review.
 1. Open a pull request, request review, and submit at least one post-review commit.
-1. Create `artifacts/step5-end-to-end-summary.md` with headings:
+1. Finish `artifacts/step5-end-to-end-summary.md` with these headings:
+   - `## Plan prompt`
    - `## Steps 2, 3, and 4 artifacts used`
    - `## Review feedback received`
    - `## Post-review commit`
@@ -32,5 +37,6 @@ Read more:
 
 - Keep the feature small so the focus stays on workflow orchestration.
 - If you cannot get live review feedback immediately, use a teammate account or collaborator to submit one review comment.
+- Reuse your earlier artifacts instead of recreating them from scratch.
 
 </details>
