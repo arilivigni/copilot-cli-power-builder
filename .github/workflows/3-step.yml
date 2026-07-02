@@ -66,8 +66,24 @@ jobs:
         with:
           file: .github/skills/pr-risk-summary/SKILL.md
 
+      - name: Check skill definition includes description
+        id: check-skill-description
+        continue-on-error: true
+        uses: skills/action-keyphrase-checker@v1
+        with:
+          text-file: .github/skills/pr-risk-summary/SKILL.md
+          keyphrase: description:
+
+      - name: Check risk report includes invocation notes section
+        id: check-invocation-notes
+        continue-on-error: true
+        uses: skills/action-keyphrase-checker@v1
+        with:
+          text-file: artifacts/step3-risk-report.md
+          keyphrase: Invocation notes
+
       - name: Check risk report includes test gaps section
-        id: check-for-keyphrase
+        id: check-test-gaps
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v1
         with:
@@ -87,8 +103,12 @@ jobs:
             results_table:
               - description: "Checked if .github/skills/pr-risk-summary/SKILL.md exists"
                 passed: ${{ steps.check-file-exists.outcome == 'success' }}
+              - description: "Checked if the skill definition includes a description field"
+                passed: ${{ steps.check-skill-description.outcome == 'success' }}
+              - description: "Checked for Invocation notes section in step 3 report"
+                passed: ${{ steps.check-invocation-notes.outcome == 'success' }}
               - description: "Checked for Test gaps section in step 3 report"
-                passed: ${{ steps.check-for-keyphrase.outcome == 'success' }}
+                passed: ${{ steps.check-test-gaps.outcome == 'success' }}
 
       - name: Fail job if not all checks passed
         if: contains(steps.*.outcome, 'failure')

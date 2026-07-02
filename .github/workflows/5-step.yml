@@ -63,8 +63,24 @@ jobs:
         with:
           file: artifacts/step5-end-to-end-summary.md
 
+      - name: Check capstone summary includes plan prompt
+        id: check-plan-prompt
+        continue-on-error: true
+        uses: skills/action-keyphrase-checker@v1
+        with:
+          text-file: artifacts/step5-end-to-end-summary.md
+          keyphrase: Plan prompt
+
+      - name: Check capstone summary includes prior artifacts
+        id: check-prior-artifacts
+        continue-on-error: true
+        uses: skills/action-keyphrase-checker@v1
+        with:
+          text-file: artifacts/step5-end-to-end-summary.md
+          keyphrase: Steps 2, 3, and 4 artifacts used
+
       - name: Check capstone summary includes post-review evidence
-        id: check-for-keyphrase
+        id: check-post-review-commit
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v1
         with:
@@ -84,8 +100,12 @@ jobs:
             results_table:
               - description: "Checked if artifacts/step5-end-to-end-summary.md exists"
                 passed: ${{ steps.check-file-exists.outcome == 'success' }}
+              - description: "Checked for Plan prompt section in capstone summary"
+                passed: ${{ steps.check-plan-prompt.outcome == 'success' }}
+              - description: "Checked for Steps 2, 3, and 4 artifacts used section in capstone summary"
+                passed: ${{ steps.check-prior-artifacts.outcome == 'success' }}
               - description: "Checked for Post-review commit section in capstone summary"
-                passed: ${{ steps.check-for-keyphrase.outcome == 'success' }}
+                passed: ${{ steps.check-post-review-commit.outcome == 'success' }}
 
       - name: Fail job if not all checks passed
         if: contains(steps.*.outcome, 'failure')

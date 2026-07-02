@@ -7,6 +7,7 @@ on:
       - main
       - "feature/**"
     paths:
+      - ".github/agents/**"
       - ".github/copilot-instructions.md"
       - "artifacts/step2-specialization-comparison.md"
 
@@ -59,15 +60,30 @@ jobs:
           file: exercise-toolkit/markdown-templates/step-feedback/checking-work.md
           edit-mode: replace
 
+      - name: Check workflow reviewer agent exists
+        id: check-agent-file-exists
+        continue-on-error: true
+        uses: skills/exercise-toolkit/actions/file-exists@v0.9.1
+        with:
+          file: .github/agents/workflow-reviewer.agent.md
+
       - name: Check copilot instructions exist
-        id: check-file-exists
+        id: check-instructions-file-exists
         continue-on-error: true
         uses: skills/exercise-toolkit/actions/file-exists@v0.9.1
         with:
           file: .github/copilot-instructions.md
 
+      - name: Check specialization comparison includes agent used
+        id: check-agent-used
+        continue-on-error: true
+        uses: skills/action-keyphrase-checker@v1
+        with:
+          text-file: artifacts/step2-specialization-comparison.md
+          keyphrase: Agent used
+
       - name: Check specialization comparison includes before/after
-        id: check-for-keyphrase
+        id: check-before-after
         continue-on-error: true
         uses: skills/action-keyphrase-checker@v1
         with:
@@ -85,10 +101,14 @@ jobs:
           vars: |
             step_number: 2
             results_table:
+              - description: "Checked if .github/agents/workflow-reviewer.agent.md exists"
+                passed: ${{ steps.check-agent-file-exists.outcome == 'success' }}
               - description: "Checked if .github/copilot-instructions.md exists"
-                passed: ${{ steps.check-file-exists.outcome == 'success' }}
+                passed: ${{ steps.check-instructions-file-exists.outcome == 'success' }}
+              - description: "Checked for Agent used section in step 2 artifact"
+                passed: ${{ steps.check-agent-used.outcome == 'success' }}
               - description: "Checked for Before/after section in step 2 artifact"
-                passed: ${{ steps.check-for-keyphrase.outcome == 'success' }}
+                passed: ${{ steps.check-before-after.outcome == 'success' }}
 
       - name: Fail job if not all checks passed
         if: contains(steps.*.outcome, 'failure')
