@@ -6,7 +6,7 @@ _Build advanced, repeatable GitHub Copilot CLI workflows from review and debuggi
 
 - **Who is this for**: Advanced developers who already use GitHub, pull requests, and Copilot fundamentals.
 - **What you'll learn**: How to run high-signal Copilot CLI workflows with specialized assistants, skills automation, MCP context, and complete PR execution.
-- **What you'll build**: A reusable Copilot CLI workflow scaffold with a custom agent, repository instructions, skill definitions, project MCP configuration, and PR-ready artifacts.
+- **What you'll build**: A reusable Copilot CLI workflow scaffold that starts as a focused review-and-debug branch, then grows into a complete feature workflow with a custom agent, repository instructions, skill definitions, project MCP configuration, and PR-ready artifacts.
 - **Prerequisites**:
   - Completion of GitHub Copilot CLI beginner content.
   - Working knowledge of pull requests, branching, and GitHub Actions.
@@ -22,7 +22,6 @@ In this exercise, you will:
 1. Automate repetitive engineering tasks with reusable Copilot CLI skills.
 1. Connect Copilot CLI to external context using MCP servers.
 1. Deliver a complete, review-driven feature workflow that combines all capabilities.
-
 
 ### How to start this exercise
 

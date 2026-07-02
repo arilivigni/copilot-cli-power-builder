@@ -15,9 +15,9 @@ Read more:
 - https://docs.github.com/en/pull-requests
 - https://github.blog/changelog/
 
-### ⌨️ Activity 1: Review the risky change first
+### ⌨️ Activity 1: Start a focused review-and-debug branch
 
-1. Create a branch named `feature/step-1-workflow` and make a small intentional bug in any sample file under `src/`.
+1. Create a branch named `feature/review-debug-loop` and make a small intentional bug in any sample file under `src/`.
 1. Ask Copilot CLI to review the change before you fix it. You can use `/review` or a natural-language prompt that explains the intended behavior and likely risk.
 1. Start `artifacts/step1-workflow-report.md` and add a `## Review findings` section with the most useful review feedback you received.
 
@@ -30,13 +30,14 @@ Read more:
    - `## Root cause`
    - `## Fix summary`
    - `## Edge-case assertion`
-1. Commit your source, test, and report updates and push your branch.
+1. Commit your source, test, and report updates and push `feature/review-debug-loop`.
 
 <details>
 <summary>Having trouble? 🤷</summary><br/>
 
 - If you do not have `src/` or `tests/` yet, create them before committing your sample changes.
 - Keep the bug small so the review and debugging loop stays focused.
+- Keep this branch alive for Steps 2, 3, and 4 so each new capability builds on the same work.
 - Keep your report concise; one short paragraph or a short bullet list under each heading is enough.
 
 </details>
